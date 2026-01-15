@@ -5,9 +5,9 @@ namespace CI_CD_Group_8.Tests
     public class PersonnummerValidatorTests
     {
         [Theory]
-        [InlineData("9001010017")]
-        [InlineData("900101-0017")]
-        public void Valid_Personnummer_ReturnsTrue(string pnr)
+        [InlineData("9001010017")]   // kan bytas om den inte stämmer
+        [InlineData("900101-0017")]  // samma men med bindestreck
+        public void Valid_ReturnsTrue(string pnr)
         {
             Assert.True(CI_CD_Group_8.PersonnummerValidator.IsValid(pnr));
         }
@@ -18,10 +18,9 @@ namespace CI_CD_Group_8.Tests
         [InlineData("abcdef-1234")] // bokstäver
         [InlineData("")]            // tom
         [InlineData("123")]         // för kort
-        public void Invalid_Personnummer_ReturnsFalse(string pnr)
+        public void Invalid_ReturnsFalse(string pnr)
         {
             Assert.False(CI_CD_Group_8.PersonnummerValidator.IsValid(pnr));
         }
     }
 }
-
