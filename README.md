@@ -1,10 +1,4 @@
-Perfekt 👍
-Här är en **färdig, komplett README.md** som du kan **kopiera rakt av** och lägga in i ditt GitHub-repo.
-Den är skriven för att **exakt uppfylla lärarens instruktioner** – inget saknas.
-
-
-
-# CI_CD_Group_8 – Personnummerkontroll i C#
+CI_CD_Group_8 – Personnummerkontroll i C#
 
 Projektbeskrivning
 
@@ -19,8 +13,7 @@ Syftet med projektet är att visa:
 * Docker-containerisering
 
 
-
- Svenska regler för personnummer (kort)
+Svenska regler för personnummer 
 
 Ett svenskt personnummer består av:
 
@@ -28,7 +21,7 @@ Ett svenskt personnummer består av:
 * Tre individnummer**
 * En kontrollsiffra**
 
-### Regler som kontrolleras i applikationen:
+Regler som kontrolleras i applikationen:
 
 * Personnumret får inte vara tomt
 * Bindestreck och mellanslag ignoreras
@@ -37,7 +30,7 @@ Ett svenskt personnummer består av:
 * Datumdelen måste vara ett giltigt datum
 * Kontrollsiffran verifieras med **Luhn-algoritmen**
 
----
+
 
 Köra applikationen lokalt (utan Docker)
 
@@ -46,7 +39,7 @@ Köra applikationen lokalt (utan Docker)
 * .NET SDK 8.0 (LTS)
 * Visual Studio eller .NET CLI
 
- Steg:
+Steg:
 
 1. Klona repot:
 
@@ -135,7 +128,6 @@ docker run -it personnummervalidator
 
 Applikationen startar och ber om ett personnummer precis som lokalt.
 
----
 
 DockerHub
 
@@ -143,7 +135,6 @@ Docker-imagen byggs och publiceras automatiskt till DockerHub via GitHub Actions
 
 Autentisering sker via **GitHub Secrets** (användarnamn och token), vilket gör lösningen säker.
 
----
 
  Projektstruktur 
 
