@@ -138,7 +138,7 @@ Autentisering sker via **GitHub Secrets** (användarnamn och token), vilket gör
 
  Projektstruktur 
 
-
+¨¨
 CI_CD_Group_8
 ├── CI_CD_Group_8
 │   ├── Program.cs
@@ -150,7 +150,7 @@ CI_CD_Group_8
 ├── .github/workflows/ci.yml
 ├── Dockerfile
 └── README.md
-
+¨¨¨¨
 
 
 Projektet uppfyller samtliga krav i uppgiften:
