@@ -12,3 +12,4 @@ WORKDIR /app
 COPY --from=build /app/publish .
 
 ENTRYPOINT ["dotnet", "CI_CD_Group_8.dll"]
+
