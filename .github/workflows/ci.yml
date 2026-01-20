@@ -1,4 +1,3 @@
-
 name: CI
 
 on:
@@ -12,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -20,10 +20,10 @@ jobs:
           dotnet-version: "9.0.x"
 
       - name: Restore
-        run: dotnet restore
+        run: dotnet restore Personnummer.sln
 
       - name: Build
-        run: dotnet build -c Release --no-restore
+        run: dotnet build Personnummer.sln -c Release --no-restore
 
       - name: Test
-        run: dotnet test -c Release --no-build
+        run: dotnet test Personnummer.sln -c Release --no-build --verbosity normal
