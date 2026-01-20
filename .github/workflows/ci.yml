@@ -20,10 +20,10 @@ jobs:
           dotnet-version: "9.0.x"
 
       - name: Restore
-        run: dotnet restore CI_CD_Group_8.sln
+        run: dotnet restore "Ci_CD_Group_8/CI_CD_Group_8.sln"
 
       - name: Build
-        run: dotnet build CI_CD_Group_8.sln -c Release --no-restore
+        run: dotnet build "Ci_CD_Group_8/CI_CD_Group_8.sln" -c Release --no-restore
 
       - name: Test
-        run: dotnet test CI_CD_Group_8.sln -c Release --no-build --verbosity normal
+        run: dotnet test "Ci_CD_Group_8/CI_CD_Group_8.sln" -c Release --no-build --verbosity normal
