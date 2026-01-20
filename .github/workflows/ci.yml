@@ -19,25 +19,12 @@ jobs:
         with:
           dotnet-version: "9.0.x"
 
-      - name: Locate solution file
-        shell: bash
-        run: |
-          echo "Searching for .sln..."
-          SLN_PATH="$(find . -maxdepth 4 -type f -name '*.sln' | head -n 1)"
-          if [ -z "$SLN_PATH" ]; then
-            echo "ERROR: No .sln file found in repository."
-            echo "Files in repo root:"
-            ls -la
-            exit 1
-          fi
-          echo "Found solution: $SLN_PATH"
-          echo "SLN_PATH=$SLN_PATH" >> "$GITHUB_ENV"
-
+      # Kör allt via solution-filen i repo-root
       - name: Restore
-        run: dotnet restore "${{ env.SLN_PATH }}"
+        run: dotnet restore "CI_CD_Group_8.sln"
 
       - name: Build
-        run: dotnet build "${{ env.SLN_PATH }}" -c Release --no-restore
+        run: dotnet build "CI_CD_Group_8.sln" -c Release --no-restore
 
       - name: Test
-        run: dotnet test "${{ env.SLN_PATH }}" -c Release --no-build --verbosity normal
+        run: dotnet test "CI_CD_Group_8.sln" -c Release --no-build --verbosity normal
